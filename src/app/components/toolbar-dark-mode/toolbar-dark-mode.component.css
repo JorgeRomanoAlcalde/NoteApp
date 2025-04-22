@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #908100;
+    height: 10%;
+}
+
+/* @@@@@@@@@  MENU  @@@@@@@@@ */
+#menu{
+    height: 37px;
+    width: 37px;
+    margin-inline-start: 20px;
+}
+
+#menu svg{
+    height: 35px;
+    width: 35px;
+}
+
+#menu:hover svg{
+    fill: #F7DD00;
+}
+
+/* @@@@@@@@@@ LOGO  @@@@@@@@@ */
+#logo{
+    color: white;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo:hover{
+    color: #F7DD00;
+}
+
+#logo:hover mat-icon svg{
+    fill: #F7DD00;
+}
+
+#logo mat-icon{
+    height: 35px;
+    width: 35px;
+}
+
+/* @@@@@@@@@  SETTINGS  @@@@@@@@@ */
+#settings{
+    height: 37px;
+    width: 37px;
+    margin-inline-end: 30px;
+}
+
+#settings svg{
+    height: 37px;
+    width: 37px;
+}
+
