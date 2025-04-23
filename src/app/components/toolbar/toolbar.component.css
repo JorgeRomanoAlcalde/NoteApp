@@ -8,4 +8,123 @@
     align-items: center;
     justify-content: space-between;
     background-color: #F7DD00;
+    height: 10%;
+}
+
+/* @@@@@@@@@  MENU  @@@@@@@@@ */
+#menu{
+    height: 42px;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline-start: 20px;
+}
+
+#menu:hover{
+    background-color: #cab600;
+    border-radius: 50%;
+}
+
+#menu svg{
+    height: 35px;
+    width: 35px;
+}
+
+/* @@@@@@@@@@ LOGO  @@@@@@@@@ */
+#logo{
+    color: black;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo mat-icon svg{
+    fill: black;
+}
+
+#logo:hover{
+    color: white;
+}
+
+#logo:hover mat-icon svg{
+    fill: white;
+}
+
+#logo mat-icon{
+    height: 35px;
+    width: 35px;
+}
+
+/* @@@@@@@@@  SETTINGS  @@@@@@@@@ */
+#settings{
+    margin-inline-end: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#settings div{
+    height: 38px;
+    width: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#settings div:hover{
+    background-color: #cab600;
+    border-radius: 50%;
+}
+
+#settings div svg{
+    height: 37px;
+    width: 37px;
+}
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* @@@@@@@@@  DARK MODE  @@@@@@@@@ */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+.dark-mode-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #908100;
+    height: 10%;
+}
+
+/* @@@@@@@@@  MENU  @@@@@@@@@ */
+.dark-mode-navbar #menu:hover{
+    background-color: #cab600;
+}
+
+.dark-mode-navbar #menu svg{
+    fill: white;
+}
+
+/* @@@@@@@@@@ LOGO  @@@@@@@@@ */
+.dark-mode-navbar #logo{
+    color: white;
+}
+
+.dark-mode-navbar #logo mat-icon svg{
+    fill: white;
+}
+
+.dark-mode-navbar #logo:hover{
+    color: #171717;
+}
+
+.dark-mode-navbar #logo:hover mat-icon svg{
+    fill: #171717;
+}
+
+/* @@@@@@@@@  SETTINGS  @@@@@@@@@ */
+.dark-mode-navbar #settings #darkMode svg{
+    fill: white;
+}
+
+.dark-mode-navbar #settings #listView svg{
+    fill: white;
 }
