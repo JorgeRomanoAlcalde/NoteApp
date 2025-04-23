@@ -27,6 +27,8 @@ Clicking [here](https://docs.google.com/document/d/1AaFBfrI3etZ3GdRvbkEAR_e53DuE
    ```bash
     ng serve
 
-2. **See your notes:**
+2. **See your notes!!**
+   
    Go to the following URL:
+   
    http://localhost:4200/
