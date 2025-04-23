@@ -29,6 +29,4 @@ Clicking [here](https://docs.google.com/document/d/1AaFBfrI3etZ3GdRvbkEAR_e53DuE
 
 2. **See your notes!!**
    
-   Go to the following URL:
-   
-   http://localhost:4200/
+   Go to the following URL: http://localhost:4200/
