@@ -1,0 +1,31 @@
+<app-toolbar>
+    <mat-sidenav-content>
+    <p>note works!</p>
+    <button mat-button [matMenuTriggerFor]="options"><mat-icon>more_vert</mat-icon></button>
+    <mat-menu #options="matMenu">
+      <button mat-menu-item><mat-icon>edit_note</mat-icon>Edit</button>
+      <button mat-menu-item [matMenuTriggerFor]="colors"><mat-icon>palette</mat-icon>Change Color</button>
+      <button mat-menu-item><mat-icon>push_pin</mat-icon>Pin</button>
+      <button mat-menu-item [matMenuTriggerFor]="folders"><mat-icon>folder</mat-icon>Folder</button>
+      <button mat-menu-item><mat-icon><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M312-144q-29.7 0-50.85-21.15Q240-186.3 240-216v-480h-48v-72h192v-48h192v48h192v72h-48v479.57Q720-186 698.85-165T648-144H312Zm336-552H312v480h336v-480ZM384-288h72v-336h-72v336Zm120 0h72v-336h-72v336ZM312-696v480-480Z"/></svg>
+      </mat-icon>Delete</button>
+    </mat-menu>
+    
+    <mat-menu #colors="matMenu">
+        <div>
+            <button mat-menu-item><mat-icon><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FE5053"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2z"/></svg></mat-icon>Red</button>
+            <button mat-menu-item><mat-icon><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#73FFE8"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2z"/></svg></mat-icon>Blue</button>
+            <button mat-menu-item><mat-icon><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFF673"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2z"/></svg></mat-icon>Yellow</button>
+            <button mat-menu-item><mat-icon><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#7FFF73"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2z"/></svg></mat-icon>Green</button>
+            <button mat-menu-item><mat-icon><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#DE73FF"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2z"/></svg></mat-icon>Purple</button>
+        </div>
+    </mat-menu>
+    
+    <mat-menu #folders="matMenu">
+      <button mat-menu-item><mat-icon>folder</mat-icon>Work</button>
+      <button mat-menu-item><mat-icon>folder</mat-icon>Hobbies</button>
+      <button mat-menu-item><mat-icon>folder</mat-icon>Shopping</button>
+      <button mat-menu-item><mat-icon>create_new_folder</mat-icon>New</button>
+    </mat-menu>
+</mat-sidenav-content>
+</app-toolbar>
