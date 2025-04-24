@@ -112,6 +112,12 @@ mat-sidenav{
     border-radius: 10px;
 }
 
+/**mat-sidenav-content{
+    background-color: #ff0000;
+    height: 100%;
+    width: 80%;
+}**/
+
 
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
