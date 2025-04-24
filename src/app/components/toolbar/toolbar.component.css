@@ -81,6 +81,39 @@
     height: 37px;
     width: 37px;
 }
+
+/* @@@@@@@@@@  SIDENAV  @@@@@@@@@ */
+mat-sidenav-container{
+    height: 100%;
+}
+
+mat-sidenav{
+    background-color: #EBEBEB;
+    padding: 16px;
+    width: 20%;
+}
+
+.mySidenav div{
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 120px;
+}
+
+.mySidenav div svg{
+    margin-right: 10px;
+    height: 28px;
+    width: 28px;
+}
+
+.mySidenav div:hover{
+    background-color: #9A9A9A;
+    border-radius: 10px;
+}
+
+
+
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 /* @@@@@@@@@  DARK MODE  @@@@@@@@@ */
@@ -127,4 +160,14 @@
 
 .dark-mode-navbar #settings #listView svg{
     fill: white;
+}
+
+/* @@@@@@@@@@  SIDENAV  @@@@@@@@@ */
+.dark-mode-sidenav .mySidenav{
+    background-color: #9A9A9A;
+}
+
+.dark-mode-sidenav .mySidenav div:hover{
+    background-color: #bbbbbb;
+    border-radius: 10px;
 }

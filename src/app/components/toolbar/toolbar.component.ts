@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-toolbar',
@@ -6,13 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent {
+  // @@@@@@@@@@@@@@@ SIDENAV @@@@@@@@@@@@@@@
+  opened = false;
+  @Output() toggleSidenav: EventEmitter<void> = new EventEmitter<void>();
+
+  onMenuClick(): void {
+    this.toggleSidenav.emit();
+  }
+
+  // @@@@@@@@@@@@@@@ DARK MODE @@@@@@@@@@@@@@@
   isDarkMode = false;
 
   constructor() {}
 
   ngOnInit(): void {
-    const storedDarkMode = localStorage.getItem('navbarDarkMode');
-    if (storedDarkMode === 'true') {
+    const storedDarkModeNavbar = localStorage.getItem('navbarDarkMode');
+    const storedDarkModeSidenav = localStorage.getItem('sidenavDarkMode');
+    if (storedDarkModeNavbar === 'true' && storedDarkModeSidenav === 'true') {
       this.isDarkMode = true;
     }
   }
@@ -20,5 +31,6 @@ export class ToolbarComponent {
   toggleDarkMode(): void {
     this.isDarkMode = !this.isDarkMode;
     localStorage.setItem('navbarDarkMode', String(this.isDarkMode));
+    localStorage.setItem('sidenavDarkMode', String(this.isDarkMode));
   }
 }
