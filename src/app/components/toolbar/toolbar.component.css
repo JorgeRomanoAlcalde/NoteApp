@@ -112,13 +112,10 @@ mat-sidenav{
     border-radius: 10px;
 }
 
-/**mat-sidenav-content{
-    background-color: #ff0000;
+mat-sidenav-content{
+    background-color: #F9F9F9;
     height: 100%;
-    width: 80%;
-}**/
-
-
+}
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
@@ -176,4 +173,12 @@ mat-sidenav{
 .dark-mode-sidenav .mySidenav div:hover{
     background-color: #bbbbbb;
     border-radius: 10px;
+}
+
+.dark-mode-sidenav mat-sidenav-content{
+    background-color: #322F35;
+}
+
+.dark-mode-sidenav mat-sidenav-content .titles h1{
+    color: white;
 }
