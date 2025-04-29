@@ -1,3 +1,30 @@
+/* FORM */
+.formNote{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.formNote #writeIcon{
+    height: 40px;
+    width: 40px;
+    margin-top: 7px;
+}
+
+.formNote form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.formNote form .options{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* MAIN */
+
 .titles{
     display: flex;
     justify-content: flex-start;
