@@ -1,11 +1,11 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { IndexComponent } from "./components/index/index.component";
-import { PinnedComponent } from "./pinned/pinned.component";
+import { PinnedComponent } from "./components/pinned/pinned.component";
 
 const routes : Routes = [
     { path: "", component: IndexComponent },
-    { path: "pinned", component: PinnedComponent },
+    { path: "pinned", component: PinnedComponent }
 ];
 
 @NgModule({

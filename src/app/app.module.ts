@@ -8,7 +8,8 @@ import { MaterialModule } from './material/material.model';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing-module';
 import { IndexComponent } from './components/index/index.component';
-import { PinnedComponent } from './pinned/pinned.component';
+import { PinnedComponent } from './components/pinned/pinned.component';
+import { AllNotesComponent } from './components/all-notes/all-notes.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PinnedComponent } from './pinned/pinned.component';
     ToolbarComponent,
     IndexComponent,
     PinnedComponent,
+    AllNotesComponent,
   ],
   imports: [
     BrowserModule,
