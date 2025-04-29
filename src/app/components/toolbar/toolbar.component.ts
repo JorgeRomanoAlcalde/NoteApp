@@ -16,6 +16,10 @@ export class ToolbarComponent {
     this.router.navigate(['/pinned']);
   }
 
+  navigateToAllNotes() {
+    this.router.navigate(['/all-notes']);
+  }
+
 
   // @@@@@@@@@@@@@@@ SIDENAV @@@@@@@@@@@@@@@
   opened = false;

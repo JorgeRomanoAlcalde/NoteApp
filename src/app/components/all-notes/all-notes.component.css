@@ -1,0 +1,39 @@
+.titles{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 250px;
+    margin-top: 20px;
+}
+
+.titles mat-icon{
+    margin-right: 10px;
+}
+
+mat-grid-list{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+
+/* NOTES */
+.note{
+    background-color: #FFF673;
+    width: 450px;
+    height: 300px;
+    margin: 20px;
+    padding: 40px;
+    border-bottom-right-radius: 30px;
+}
+
+.note .noteTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.note .noteBody{
+    width: 250px; 
+    height: 200px; 
+    overflow: auto;
+}
