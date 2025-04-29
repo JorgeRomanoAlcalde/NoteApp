@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,6 +8,15 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent {
+
+  constructor(private router: Router) { }
+
+  // @@@@@@@@@@@@@@ ROUTES @@@@@@@@@@@@@@@@@@
+  navigateToPinned() {
+    this.router.navigate(['/pinned']);
+  }
+
+
   // @@@@@@@@@@@@@@@ SIDENAV @@@@@@@@@@@@@@@
   opened = false;
   @Output() toggleSidenav: EventEmitter<void> = new EventEmitter<void>();
@@ -17,8 +27,6 @@ export class ToolbarComponent {
 
   // @@@@@@@@@@@@@@@ DARK MODE @@@@@@@@@@@@@@@
   isDarkMode = false;
-
-  constructor() {}
 
   ngOnInit(): void {
     const storedDarkModeNavbar = localStorage.getItem('navbarDarkMode');
