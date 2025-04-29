@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { IndexComponent } from './components/index/index.component';
 import { PinnedComponent } from './components/pinned/pinned.component';
 import { AllNotesComponent } from './components/all-notes/all-notes.component';
+import { FoldersComponent } from './components/folders/folders.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AllNotesComponent } from './components/all-notes/all-notes.component';
     IndexComponent,
     PinnedComponent,
     AllNotesComponent,
+    FoldersComponent,
   ],
   imports: [
     BrowserModule,

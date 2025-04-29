@@ -3,11 +3,13 @@ import { RouterModule, Routes } from "@angular/router";
 import { IndexComponent } from "./components/index/index.component";
 import { PinnedComponent } from "./components/pinned/pinned.component";
 import { AllNotesComponent } from "./components/all-notes/all-notes.component";
+import { FoldersComponent } from "./components/folders/folders.component";
 
 const routes : Routes = [
     { path: "", component: IndexComponent },
+    { path: "all-notes", component: AllNotesComponent },
     { path: "pinned", component: PinnedComponent },
-    { path: "all-notes", component: AllNotesComponent }
+    { path: "folders", component: FoldersComponent }
 ];
 
 @NgModule({

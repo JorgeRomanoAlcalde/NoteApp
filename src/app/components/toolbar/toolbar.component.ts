@@ -12,12 +12,20 @@ export class ToolbarComponent {
   constructor(private router: Router) { }
 
   // @@@@@@@@@@@@@@ ROUTES @@@@@@@@@@@@@@@@@@
-  navigateToPinned() {
-    this.router.navigate(['/pinned']);
+  navigateToIndex() {
+    this.router.navigate(['/']);
   }
 
   navigateToAllNotes() {
     this.router.navigate(['/all-notes']);
+  }
+
+  navigateToPinned() {
+    this.router.navigate(['/pinned']);
+  }
+
+  navigateToFolders() {
+    this.router.navigate(['/folders']);
   }
 
 
