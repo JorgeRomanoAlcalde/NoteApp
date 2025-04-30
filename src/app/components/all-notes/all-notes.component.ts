@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Note } from 'src/app/note';
 
 @Component({
   selector: 'app-all-notes',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./all-notes.component.css']
 })
 export class AllNotesComponent {
-
+  noteTitle = '';
+  noteModel = new Note('','','','',false,false);
 }
