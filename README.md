@@ -16,8 +16,7 @@ Programming languages:
 * CSS
 
 ## Mongo DB tables
-![GeorgesNotes Tables](https://github.com/user-attachments/assets/076cced9-b3dc-4825-91dc-3ec6d75df51a)
-
+![GeorgesNotes Tables](https://github.com/user-attachments/assets/7f136a28-ad70-4d85-b2ef-6100eff73c6b)
 
 ## Technical Writeup
 Clicking [here](https://docs.google.com/document/d/1AaFBfrI3etZ3GdRvbkEAR_e53DuEjtpA-c_d19VZ6VI/edit?usp=sharing) You will see a small documentation about the decisions that have been followed to create the project
