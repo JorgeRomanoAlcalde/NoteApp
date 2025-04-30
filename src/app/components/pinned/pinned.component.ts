@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Note } from 'src/app/note';
 
 @Component({
   selector: 'app-pinned',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./pinned.component.css']
 })
 export class PinnedComponent {
-
+  noteTitle = '';
+  noteModel = new Note('','','','',false,false);
 }
