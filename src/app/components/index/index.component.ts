@@ -1,11 +1,13 @@
 import { Component, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Note } from 'src/app/note';
 
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  styleUrls: ['./index.component.css'],
 })
 export class IndexComponent {
-
-  @Input() valorDelPadre: boolean | undefined;
+  noteTitle = '';
+  noteModel = new Note('','','','',false,false);
 }

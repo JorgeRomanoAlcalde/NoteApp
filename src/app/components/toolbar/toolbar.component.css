@@ -84,7 +84,7 @@
 
 /* @@@@@@@@@@  SIDENAV  @@@@@@@@@ */
 mat-sidenav-container{
-    height: 100%;
+    height: auto;
 }
 
 mat-sidenav{

@@ -20,7 +20,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
-
+import { FormsModule } from '@angular/forms';
 
 
 const Material = [ 
@@ -44,7 +44,8 @@ const Material = [
   MatSelectModule,
   MatAutocompleteModule,
   MatTableModule,
-  MatSortModule
+  MatSortModule,
+  FormsModule
 ];
 
 @NgModule({

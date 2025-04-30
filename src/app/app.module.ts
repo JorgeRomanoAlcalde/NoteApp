@@ -11,6 +11,7 @@ import { IndexComponent } from './components/index/index.component';
 import { PinnedComponent } from './components/pinned/pinned.component';
 import { AllNotesComponent } from './components/all-notes/all-notes.component';
 import { FoldersComponent } from './components/folders/folders.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FoldersComponent } from './components/folders/folders.component';
     BrowserAnimationsModule,
     MaterialModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
