@@ -12,6 +12,7 @@ import { PinnedComponent } from './components/pinned/pinned.component';
 import { AllNotesComponent } from './components/all-notes/all-notes.component';
 import { FoldersComponent } from './components/folders/folders.component';
 import { FormsModule } from '@angular/forms';
+import { TrashcanComponent } from './components/trashcan/trashcan.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     PinnedComponent,
     AllNotesComponent,
     FoldersComponent,
+    TrashcanComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     RouterModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

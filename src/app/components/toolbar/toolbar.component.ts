@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 
 @Component({
@@ -26,6 +25,10 @@ export class ToolbarComponent {
 
   navigateToFolders() {
     this.router.navigate(['/folders']);
+  }
+
+  navigateToTrashcan() {
+    this.router.navigate(['/trashcan']);
   }
 
 
