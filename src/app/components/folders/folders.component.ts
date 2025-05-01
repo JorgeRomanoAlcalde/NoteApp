@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NewFolderDialogComponent } from 'src/app/components/new-folder-dialog/new-folder-dialog.component';
 import { Note } from 'src/app/note';
+import { EditNoteDialogComponent } from '../edit-note-dialog/edit-note-dialog.component';
 
 @Component({
   selector: 'app-folders',
@@ -14,6 +15,14 @@ export class FoldersComponent {
 
   readonly dialog = inject(MatDialog);
   
+    openEditNoteDialog() {
+      const dialogRef = this.dialog.open(EditNoteDialogComponent);
+
+      dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+      });
+    }
+
     openNewFolderDialog() {
       const dialogRef = this.dialog.open(NewFolderDialogComponent);
   

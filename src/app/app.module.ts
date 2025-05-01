@@ -16,6 +16,7 @@ import { TrashcanComponent } from './components/trashcan/trashcan.component';
 import { DiscardDialogComponent } from './components/discard-dialog/discard-dialog.component';
 import { DiscardAllDialogComponent } from './components/discard-all-dialog/discard-all-dialog.component';
 import { NewFolderDialogComponent } from './components/new-folder-dialog/new-folder-dialog.component';
+import { EditNoteDialogComponent } from './components/edit-note-dialog/edit-note-dialog.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { NewFolderDialogComponent } from './components/new-folder-dialog/new-fol
     DiscardDialogComponent,
     DiscardAllDialogComponent,
     NewFolderDialogComponent,
+    EditNoteDialogComponent,
   ],
   entryComponents:[DiscardDialogComponent],
   imports: [

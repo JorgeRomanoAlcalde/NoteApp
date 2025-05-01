@@ -92,7 +92,7 @@
         </mat-grid-list>
         
             <mat-menu #options="matMenu">
-                <button mat-menu-item><mat-icon>edit_note</mat-icon>Edit</button>
+                <button mat-menu-item (click)="openEditNoteDialog()"><mat-icon>edit_note</mat-icon>Edit</button>
                 <button mat-menu-item [matMenuTriggerFor]="colors"><mat-icon>palette</mat-icon>Change Color</button>
                 <button mat-menu-item><mat-icon>push_pin</mat-icon>Pin</button>
                 <button mat-menu-item [matMenuTriggerFor]="folders"><mat-icon>folder</mat-icon>Folder</button>
@@ -114,7 +114,7 @@
                 <button mat-menu-item><mat-icon>folder</mat-icon>Work</button>
                 <button mat-menu-item><mat-icon>folder</mat-icon>Hobbies</button>
                 <button mat-menu-item><mat-icon>folder</mat-icon>Shopping</button>
-                <button mat-menu-item><mat-icon>create_new_folder</mat-icon>New</button>
+                <button mat-menu-item (click)="openNewFolderDialog()"><mat-icon>create_new_folder</mat-icon>New</button>
             </mat-menu>
     </section>
 </app-toolbar>
