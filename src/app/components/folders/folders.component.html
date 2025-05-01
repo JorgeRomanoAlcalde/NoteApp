@@ -24,8 +24,11 @@
             </section>
         </section>
 
-        <div class="titles">
-            <mat-icon>folder</mat-icon><h1>Work</h1>
+        <div class="titleButtonStructure">
+            <div class="titles">
+                <mat-icon>folder</mat-icon><h1>Work</h1>
+            </div>
+            <button type="button" mat-raised-button (click)="openNewFolderDialog()"><mat-icon>create_new_folder</mat-icon>NEW FOLDER</button>
         </div>
         <mat-grid-list cols="4" rowHeight="400px">
             <mat-grid-tile class="noteModule">

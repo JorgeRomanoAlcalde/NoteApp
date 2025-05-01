@@ -59,6 +59,27 @@
 }
 
 /* MAIN */
+.titleButtonStructure{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleButtonStructure button{
+    margin-right: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fae900;
+    padding: 10px;
+    font-weight: bolder;
+    height: 60px;
+    width: 140px;
+}
+
+.titleButtonStructure button mat-icon{
+    margin-bottom: 3px;
+}
 
 .titles{
     display: flex;

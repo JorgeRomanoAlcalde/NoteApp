@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { TrashcanComponent } from './components/trashcan/trashcan.component';
 import { DiscardDialogComponent } from './components/discard-dialog/discard-dialog.component';
 import { DiscardAllDialogComponent } from './components/discard-all-dialog/discard-all-dialog.component';
+import { NewFolderDialogComponent } from './components/new-folder-dialog/new-folder-dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DiscardAllDialogComponent } from './components/discard-all-dialog/disca
     TrashcanComponent,
     DiscardDialogComponent,
     DiscardAllDialogComponent,
+    NewFolderDialogComponent,
   ],
   entryComponents:[DiscardDialogComponent],
   imports: [
