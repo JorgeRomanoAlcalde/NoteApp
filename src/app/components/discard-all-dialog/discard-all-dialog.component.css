@@ -1,0 +1,23 @@
+#dialog{
+    border-radius: 20%;
+    height: 180px;
+    padding: 20px 40px 20px 40px;
+}
+
+.titles{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.titles mat-icon{
+    margin-right: 10px;
+}
+
+.buttons{
+    margin-left: 230px;
+}
+
+.buttons button{
+    margin-left: 15px;
+}

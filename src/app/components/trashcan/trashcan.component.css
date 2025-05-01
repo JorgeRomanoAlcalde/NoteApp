@@ -1,64 +1,25 @@
-/* FORM */
-.formNote {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.formNote .formNoteBox{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-    box-shadow: 0px 0px 5px gray;
-    padding: 15px 15px 0px 15px;
-    border-radius: 10px;
-}
-
-.formNote .formNoteBox #writeIcon{
-    height: 40px;
-    width: 40px;
-    margin-top: 7px;
-}
-
-.formNote .formNoteBox form{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-}
-
-.formNote .formNoteBox form .hidden {
-    padding-bottom: 15px;
-}
-
-.formNote .formNoteBox form .hidden mat-form-field{
-    width: 100%;
-}
-
-.formNote .formNoteBox form .options{
+/* MAIN */
+.titleButtonStructure{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.formNote .formNoteBox form .options .optionsButtons{
-    border: none;
-    background-color: #F9F9F9;
-    padding: 5px;
-}
-
-.formNote .formNoteBox form .options .optionsButtons:hover{
-    background-color: #9A9A9A;
-    border-radius: 20px;
-    
-}
-
-.formNote .formNoteBox form .options #submit{
+.titleButtonStructure button{
+    margin-right: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #fae900;
-    font-weight: bold;
+    padding: 10px;
+    font-weight: bolder;
+    height: 60px;
+    width: 140px;
 }
 
-/* MAIN */
+.titleButtonStructure button mat-icon{
+    margin-bottom: 3px;
+}
 
 .titles{
     display: flex;

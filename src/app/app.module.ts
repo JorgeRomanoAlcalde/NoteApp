@@ -13,6 +13,8 @@ import { AllNotesComponent } from './components/all-notes/all-notes.component';
 import { FoldersComponent } from './components/folders/folders.component';
 import { FormsModule } from '@angular/forms';
 import { TrashcanComponent } from './components/trashcan/trashcan.component';
+import { DiscardDialogComponent } from './components/discard-dialog/discard-dialog.component';
+import { DiscardAllDialogComponent } from './components/discard-all-dialog/discard-all-dialog.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,10 @@ import { TrashcanComponent } from './components/trashcan/trashcan.component';
     AllNotesComponent,
     FoldersComponent,
     TrashcanComponent,
+    DiscardDialogComponent,
+    DiscardAllDialogComponent,
   ],
+  entryComponents:[DiscardDialogComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
