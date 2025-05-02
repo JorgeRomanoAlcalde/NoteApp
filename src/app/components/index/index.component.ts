@@ -1,17 +1,28 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Note } from 'src/app/note';
 import { EditNoteDialogComponent } from '../edit-note-dialog/edit-note-dialog.component';
 import { NewFolderDialogComponent } from '../new-folder-dialog/new-folder-dialog.component';
+import { ServiceComponent } from 'src/app/service/service.component';
 
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css'],
 })
-export class IndexComponent {
+export class IndexComponent implements OnInit{
   noteTitle = '';
   noteModel = new Note('','','','',false,false);
+
+  constructor(private service: ServiceComponent){
+    
+  }
+
+  ngOnInit(): void {
+    this.service.testRequest().subscribe(data => {
+      console.log(data);
+    });
+  }
 
   readonly dialog = inject(MatDialog);
 
