@@ -13,6 +13,7 @@ import { ServiceComponent } from 'src/app/service/service.component';
 export class IndexComponent implements OnInit{
   noteTitle = '';
   noteModel = new Note('','','','',false,false);
+  backendNotes: any;
 
   constructor(private service: ServiceComponent){
     
@@ -21,6 +22,7 @@ export class IndexComponent implements OnInit{
   ngOnInit(): void {
     this.service.testRequest().subscribe(data => {
       console.log(data);
+      this.backendNotes = data;
     });
   }
 
