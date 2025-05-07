@@ -15,15 +15,20 @@ export class AllNotesComponent {
   noteModel = new Note('','','','',false,false);
 
   allNotes: any;
+  folderNames: string[] = [];
   
     constructor(private service: ServiceComponent){
       
     }
   
     ngOnInit(): void {
-      this.service.testRequest().subscribe(data => {
+      this.service.noteRequest().subscribe(data => {
         this.allNotes = data.allNotes;
         console.log(data);
+      });
+
+      this.service.folderRequest().subscribe(data => {
+        this.folderNames = Object.keys(data);
       });
     }
 

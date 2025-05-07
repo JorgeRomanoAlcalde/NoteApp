@@ -26,15 +26,15 @@
 
         <button  id="newFolder" type="button" mat-raised-button (click)="openNewFolderDialog()"><mat-icon>create_new_folder</mat-icon>NEW FOLDER</button>
 
-        <section *ngFor="let folderName of folderNames">
+        <section *ngFor="let folder of folderNames">
             <div class="titleButtonStructure">
                 <div class="titles">
-                    <mat-icon>folder</mat-icon><h1>{{folderName}}</h1>
+                    <mat-icon>folder</mat-icon><h1>{{folder}}</h1>
                 </div>
                 
             </div>
             <mat-grid-list cols="4" rowHeight="400px">
-                <mat-grid-tile class="noteModule" *ngFor="let note of foldersWithNotes[folderName]">
+                <mat-grid-tile class="noteModule" *ngFor="let note of foldersWithNotes[folder]">
                     <section class="note">
                         <div class="noteTitle">
                             <h2>{{note.title}}</h2>
@@ -53,7 +53,7 @@
                 <button mat-menu-item (click)="openEditNoteDialog()"><mat-icon>edit_note</mat-icon>Edit</button>
                 <button mat-menu-item [matMenuTriggerFor]="colors"><mat-icon>palette</mat-icon>Change Color</button>
                 <button mat-menu-item><mat-icon>push_pin</mat-icon>Pin</button>
-                <button mat-menu-item [matMenuTriggerFor]="folders"><mat-icon>folder</mat-icon>Folder</button>
+                <button mat-menu-item><mat-icon>folder</mat-icon>Remove from folder</button>
                 <button mat-menu-item><mat-icon><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M312-144q-29.7 0-50.85-21.15Q240-186.3 240-216v-480h-48v-72h192v-48h192v48h192v72h-48v479.57Q720-186 698.85-165T648-144H312Zm336-552H312v480h336v-480ZM384-288h72v-336h-72v336Zm120 0h72v-336h-72v336ZM312-696v480-480Z"/></svg>
                 </mat-icon>Delete</button>
             </mat-menu>
@@ -69,10 +69,7 @@
             </mat-menu>
                 
             <mat-menu #folders="matMenu">
-                <button mat-menu-item><mat-icon>folder</mat-icon>Work</button>
-                <button mat-menu-item><mat-icon>folder</mat-icon>Hobbies</button>
-                <button mat-menu-item><mat-icon>folder</mat-icon>Shopping</button>
-                <button mat-menu-item (click)="openNewFolderDialog()"><mat-icon>create_new_folder</mat-icon>New</button>
+                <button mat-menu-item *ngFor="let folder of folderNames"><mat-icon>folder</mat-icon>{{folder}}</button>
             </mat-menu>
     </section>
 </app-toolbar>

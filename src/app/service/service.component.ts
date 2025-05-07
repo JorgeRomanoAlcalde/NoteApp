@@ -19,11 +19,11 @@ export class ServiceComponent {
     return this.http.get("http://localhost:3000/notes", this.getHeader);
   }
 
-  public testRequest(): Observable<any> {
-    return this.http.get("http://localhost:3000/blogs", this.getHeader);
-  }
-
   public folderRequest(): Observable<any> {
     return this.http.get("http://localhost:3000/folders", this.getHeader);
+  }
+
+  public createNoteRequest(): Observable<any> {
+    return this.http.post("http://localhost:3000/createNote", this.getHeader);
   }
 }

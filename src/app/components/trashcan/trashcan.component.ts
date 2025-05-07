@@ -21,7 +21,7 @@ export class TrashcanComponent {
     }
   
     ngOnInit(): void {
-      this.service.testRequest().subscribe(data => {
+      this.service.noteRequest().subscribe(data => {
         this.discardNotes = data.discardNotes;
         console.log(data);
       });

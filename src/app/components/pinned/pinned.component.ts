@@ -15,15 +15,20 @@ export class PinnedComponent {
   noteModel = new Note('','','','',false,false);
 
   pinnedNotes:any;
+  folderNames: string[] = [];
 
   constructor(private service: ServiceComponent){
       
     }
 
   ngOnInit(): void {
-    this.service.testRequest().subscribe(data => {
+    this.service.noteRequest().subscribe(data => {
       this.pinnedNotes = data.pinnedNotes;
       console.log(data);
+    });
+
+    this.service.folderRequest().subscribe(data => {
+      this.folderNames = Object.keys(data);
     });
   }
 

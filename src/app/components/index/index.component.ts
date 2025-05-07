@@ -16,6 +16,7 @@ export class IndexComponent implements OnInit{
   backendNotes: any;
   pinnedNotes:any;
   otherNotes:any;
+  folderNames: string[] = [];
 
   constructor(private service: ServiceComponent){
     
@@ -26,6 +27,10 @@ export class IndexComponent implements OnInit{
       this.pinnedNotes = data.pinnedNotes;
       this.otherNotes = data.otherNotes;
       console.log(data);
+    });
+
+    this.service.folderRequest().subscribe(data => {
+      this.folderNames = Object.keys(data);
     });
   }
 
