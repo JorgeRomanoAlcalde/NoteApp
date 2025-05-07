@@ -65,19 +65,21 @@
     align-items: center;
 }
 
-.titleButtonStructure button{
+#newFolder{
     margin-right: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fae900;
     padding: 10px;
+    margin-left: 1700px;
+    margin-top: 20px;
     font-weight: bolder;
     height: 60px;
     width: 140px;
 }
 
-.titleButtonStructure button mat-icon{
+#newFolder mat-icon{
     margin-bottom: 3px;
 }
 

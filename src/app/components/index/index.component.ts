@@ -22,7 +22,7 @@ export class IndexComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.service.testRequest().subscribe(data => {
+    this.service.noteRequest().subscribe(data => {
       this.pinnedNotes = data.pinnedNotes;
       this.otherNotes = data.otherNotes;
       console.log(data);
