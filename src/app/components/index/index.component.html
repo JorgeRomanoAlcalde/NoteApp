@@ -28,14 +28,16 @@
             <mat-icon>push_pin</mat-icon><h1>Pinned</h1>
         </div>
         <mat-grid-list cols="4" rowHeight="400px">
-            <mat-grid-tile class="noteModule" *ngFor="let note of backendNotes?.notes">
+            <mat-grid-tile class="noteModule" *ngFor="let note of pinnedNotes">
                 <section class="note" *ngIf="note?.pinned">
                     <div class="noteTitle">
                         <h2>{{ note.title }}</h2>
                         <button mat-button [matMenuTriggerFor]="options"><mat-icon>more_vert</mat-icon></button>
                     </div>
                     <div class="noteBody">
-                        <p>{{ note.body }}</p>
+                        <textarea matInput rows="15" cols="30">
+                            {{ note.body }}
+                        </textarea>
                     </div>
                 </section>
             </mat-grid-tile>
@@ -45,7 +47,7 @@
             <mat-icon>sticky_note_2</mat-icon><h1>Other</h1>
         </div>
         <mat-grid-list cols="4" rowHeight="400px">
-            <mat-grid-tile class="noteModule" *ngFor="let note of backendNotes?.notes">
+            <mat-grid-tile class="noteModule" *ngFor="let note of otherNotes">
                 <section class="note" *ngIf="note?.pinned == false">
                     <div class="noteTitle">
                         <h2>{{ note.title }}</h2>

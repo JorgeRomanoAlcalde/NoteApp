@@ -14,6 +14,8 @@ export class IndexComponent implements OnInit{
   noteTitle = '';
   noteModel = new Note('','','','',false,false);
   backendNotes: any;
+  pinnedNotes:any;
+  otherNotes:any;
 
   constructor(private service: ServiceComponent){
     
@@ -21,8 +23,8 @@ export class IndexComponent implements OnInit{
 
   ngOnInit(): void {
     this.service.testRequest().subscribe(data => {
-      console.log(data);
-      this.backendNotes = data;
+      this.pinnedNotes = data.pinnedNotes;
+      this.otherNotes = data.otherNotes;
     });
   }
 
