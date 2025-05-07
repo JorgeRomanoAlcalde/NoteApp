@@ -35,7 +35,9 @@
                         <button mat-button [matMenuTriggerFor]="options"><mat-icon>more_vert</mat-icon></button>
                     </div>
                     <div class="noteBody">
-                        <p>{{ note.body }}</p>
+                        <textarea matInput rows="15" cols="25">
+                            {{ note.body }}
+                        </textarea>
                     </div>
                 </section>
             </mat-grid-tile>

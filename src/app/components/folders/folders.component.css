@@ -116,6 +116,9 @@ mat-grid-list{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 78px;
+    width: 250px;
+    overflow:hidden;
 }
 
 .note .noteTitle button mat-icon{
@@ -134,3 +137,15 @@ mat-grid-list{
     overflow: auto;
 }
 
+.note .noteBody textarea {
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;   
+    font-weight: inherit;
+    line-height: inherit;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    box-shadow: none;
+  }
