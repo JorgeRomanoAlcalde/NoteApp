@@ -28,7 +28,7 @@
             <mat-icon>sticky_note_2</mat-icon><h1>All notes</h1>
         </div>
         <mat-grid-list cols="4" rowHeight="400px">
-            <mat-grid-tile class="noteModule" *ngFor="let note of backendNotes?.notes">
+            <mat-grid-tile class="noteModule" *ngFor="let note of allNotes">
                 <section class="note">
                     <div class="noteTitle">
                         <h2>{{ note.title }}</h2>

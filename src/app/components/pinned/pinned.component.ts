@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Note } from 'src/app/note';
 import { EditNoteDialogComponent } from '../edit-note-dialog/edit-note-dialog.component';
 import { NewFolderDialogComponent } from '../new-folder-dialog/new-folder-dialog.component';
+import { ServiceComponent } from 'src/app/service/service.component';
 
 @Component({
   selector: 'app-pinned',
@@ -12,6 +13,19 @@ import { NewFolderDialogComponent } from '../new-folder-dialog/new-folder-dialog
 export class PinnedComponent {
   noteTitle = '';
   noteModel = new Note('','','','',false,false);
+
+  pinnedNotes:any;
+
+  constructor(private service: ServiceComponent){
+      
+    }
+
+  ngOnInit(): void {
+    this.service.testRequest().subscribe(data => {
+      this.pinnedNotes = data.pinnedNotes;
+      console.log(data);
+    });
+  }
 
   readonly dialog = inject(MatDialog);
     

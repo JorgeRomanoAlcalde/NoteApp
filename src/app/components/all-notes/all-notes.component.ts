@@ -14,7 +14,7 @@ export class AllNotesComponent {
   noteTitle = '';
   noteModel = new Note('','','','',false,false);
 
-  backendNotes: any;
+  allNotes: any;
   
     constructor(private service: ServiceComponent){
       
@@ -22,8 +22,8 @@ export class AllNotesComponent {
   
     ngOnInit(): void {
       this.service.testRequest().subscribe(data => {
+        this.allNotes = data.allNotes;
         console.log(data);
-        this.backendNotes = data;
       });
     }
 

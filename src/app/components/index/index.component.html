@@ -29,7 +29,7 @@
         </div>
         <mat-grid-list cols="4" rowHeight="400px">
             <mat-grid-tile class="noteModule" *ngFor="let note of pinnedNotes">
-                <section class="note" *ngIf="note?.pinned">
+                <section class="note">
                     <div class="noteTitle">
                         <h2>{{ note.title }}</h2>
                         <button mat-button [matMenuTriggerFor]="options"><mat-icon>more_vert</mat-icon></button>
@@ -48,7 +48,7 @@
         </div>
         <mat-grid-list cols="4" rowHeight="400px">
             <mat-grid-tile class="noteModule" *ngFor="let note of otherNotes">
-                <section class="note" *ngIf="note?.pinned == false">
+                <section class="note">
                     <div class="noteTitle">
                         <h2>{{ note.title }}</h2>
                         <button mat-button [matMenuTriggerFor]="options"><mat-icon>more_vert</mat-icon></button>

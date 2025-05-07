@@ -8,58 +8,16 @@
             <button type="button" mat-raised-button (click)="openDiscardAllDialog()"><mat-icon>delete</mat-icon>DELETE ALL</button>
         </div>
         <mat-grid-list cols="4" rowHeight="400px">
-            <mat-grid-tile class="noteModule">
+            <mat-grid-tile class="noteModule" *ngFor="let note of discardNotes">
                 <section class="note">
                     <div class="noteTitle">
-                        <h2>Title</h2>
+                        <h2>{{ note.title }}</h2>
                         <button mat-button [matMenuTriggerFor]="options"><mat-icon>more_vert</mat-icon></button>
                     </div>
                     <div class="noteBody">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </section>
-            </mat-grid-tile>
-            <mat-grid-tile class="noteModule">
-                <section class="note" style="background-color: #73FFE8;">
-                    <div class="noteTitle">
-                        <h2>Title</h2>
-                        <button mat-button [matMenuTriggerFor]="options"><mat-icon>more_vert</mat-icon></button>
-                    </div>
-                    <div class="noteBody">
-                        <p>Qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </section>
-            </mat-grid-tile>
-            <mat-grid-tile class="noteModule">
-                <section class="note" style="background-color: #DE73FF;">
-                    <div class="noteTitle">
-                        <h2>Title</h2>
-                        <button mat-button [matMenuTriggerFor]="options"><mat-icon>more_vert</mat-icon></button>
-                    </div>
-                    <div class="noteBody">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </section>
-            </mat-grid-tile>
-            <mat-grid-tile class="noteModule">
-                <section class="note" style="background-color: #FE5053;">
-                    <div class="noteTitle">
-                        <h2>Title</h2>
-                        <button mat-button [matMenuTriggerFor]="options"><mat-icon>more_vert</mat-icon></button>
-                    </div>
-                    <div class="noteBody">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                </section>
-            </mat-grid-tile>
-            <mat-grid-tile class="noteModule" *ngFor="let _ of [].constructor(7); let i = index;">
-                <section class="note">
-                    <div class="noteTitle">
-                        <h2>Title</h2>
-                        <button mat-button [matMenuTriggerFor]="options"><mat-icon>more_vert</mat-icon></button>
-                    </div>
-                    <div class="noteBody">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <textarea matInput rows="15" cols="30">
+                            {{ note.body }}
+                        </textarea>
                     </div>
                 </section>
             </mat-grid-tile>

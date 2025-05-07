@@ -25,6 +25,7 @@ export class IndexComponent implements OnInit{
     this.service.testRequest().subscribe(data => {
       this.pinnedNotes = data.pinnedNotes;
       this.otherNotes = data.otherNotes;
+      console.log(data);
     });
   }
 

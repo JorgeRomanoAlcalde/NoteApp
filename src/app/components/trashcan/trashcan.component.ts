@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Note } from 'src/app/note';
 import { DiscardDialogComponent } from '../discard-dialog/discard-dialog.component';
 import { DiscardAllDialogComponent } from '../discard-all-dialog/discard-all-dialog.component';
+import { ServiceComponent } from 'src/app/service/service.component';
 
 @Component({
   selector: 'app-trashcan',
@@ -12,6 +13,19 @@ import { DiscardAllDialogComponent } from '../discard-all-dialog/discard-all-dia
 export class TrashcanComponent {
   noteTitle = '';
   noteModel = new Note('','','','',false,false);
+
+  discardNotes:any;
+  
+    constructor(private service: ServiceComponent){
+      
+    }
+  
+    ngOnInit(): void {
+      this.service.testRequest().subscribe(data => {
+        this.discardNotes = data.discardNotes;
+        console.log(data);
+      });
+    }
 
   readonly dialog = inject(MatDialog);
 
