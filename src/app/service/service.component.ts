@@ -32,18 +32,16 @@ export class ServiceComponent {
   }
 
   public discardNote(note: { id: any }): Observable<any> {
-    console.log(note);
     return this.http.post<any>("http://localhost:3000/note/:id/discard", note, this.getHeader);
   }
 
   public deleteNote(noteId: any ): Observable<any> {
-    console.log(noteId);
     const url = `http://localhost:3000/note/${noteId}/delete`;
     return this.http.delete<any>(url, this.getHeader);
   }
 
-  public deleteFolder(folder: { id: any }): Observable<any> {
-    console.log(folder);
-    return this.http.post<any>("http://localhost:3000/folder/:id/delete", folder, this.getHeader);
+  public deleteFolder(folderName: any ): Observable<any> {
+    const url = `http://localhost:3000/folder/${folderName}/delete`;
+    return this.http.delete<any>(url, this.getHeader);
   }
 }

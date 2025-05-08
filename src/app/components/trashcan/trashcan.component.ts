@@ -34,7 +34,6 @@ export class TrashcanComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
-        // Si el diálogo devuelve 'true' (eliminación exitosa), recarga las notas
         this.ngOnInit();
       }
       console.log(`Dialog result: ${result}`);

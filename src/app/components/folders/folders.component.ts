@@ -30,17 +30,13 @@ export class FoldersComponent {
   }
 
   //Delete folder
-  /*deleteFolder() {
-    const folder = {
-      id: String,
-    };
-
-    this.service.createFolder(folder).subscribe(
+  deleteFolder(folderName: any) {
+    this.service.deleteFolder(folderName).subscribe(
       (error) => {
         console.error('Error creating the folder:', error);
       }
     );
-  }*/
+  }
 
   readonly dialog = inject(MatDialog);
 
