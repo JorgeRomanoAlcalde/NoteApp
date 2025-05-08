@@ -4,6 +4,7 @@ import { Note } from 'src/app/note';
 import { EditNoteDialogComponent } from '../edit-note-dialog/edit-note-dialog.component';
 import { NewFolderDialogComponent } from '../new-folder-dialog/new-folder-dialog.component';
 import { ServiceComponent } from 'src/app/service/service.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-index',
@@ -32,6 +33,26 @@ export class IndexComponent implements OnInit{
     this.service.folderRequest().subscribe(data => {
       this.folderNames = Object.keys(data);
     });
+  }
+
+  //Create Note
+  createNewNote(formData: any) {
+    const newNote = {
+      title: formData.title,
+      body: formData.body,
+    };
+
+    this.service.createNote(newNote).subscribe(
+      (response) => {
+        this.ngOnInit();
+      },
+      (error) => {
+        console.error('Error creating the note:', error);
+      }
+    );
+
+    this.noteModel.title = " ";
+    this.noteModel.body = " ";
   }
 
   readonly dialog = inject(MatDialog);

@@ -23,7 +23,12 @@ export class ServiceComponent {
     return this.http.get("http://localhost:3000/folders", this.getHeader);
   }
 
-  public createNoteRequest(): Observable<any> {
-    return this.http.post("http://localhost:3000/createNote", this.getHeader);
+  public createNote(newNote: { title: String; body: String; }): Observable<any> {
+    return this.http.post<any>("http://localhost:3000/createNote", newNote, this.getHeader);
+  }
+
+  public createFolder(newFolder: { folder: String }): Observable<any> {
+    console.log(newFolder);
+    return this.http.post<any>("http://localhost:3000/createFolder", newFolder, this.getHeader);
   }
 }
