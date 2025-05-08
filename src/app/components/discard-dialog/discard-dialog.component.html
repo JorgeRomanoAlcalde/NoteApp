@@ -6,6 +6,6 @@
     <p>Are you sure you want to discard permanently delete this note</p>
     <div class="buttons">
         <button mat-button (click)="onNoClick()" cdkFocusInitial>Cancel</button>
-        <button mat-button>Ok</button>
+        <button mat-button (click)="deleteNote()">Ok</button>
     </div>
 </section>

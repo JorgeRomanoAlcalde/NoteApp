@@ -13,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class IndexComponent implements OnInit{
   noteTitle = '';
-  noteModel = new Note('','','','',false,false);
+  noteModel = new Note('','','','','',false,false);
   backendNotes: any;
   pinnedNotes:any;
   otherNotes:any;
@@ -26,6 +26,7 @@ export class IndexComponent implements OnInit{
   ngOnInit(): void {
     this.service.noteRequest().subscribe(data => {
       this.pinnedNotes = data.pinnedNotes;
+      console.log(this.pinnedNotes)
       this.otherNotes = data.otherNotes;
       console.log(data);
     });

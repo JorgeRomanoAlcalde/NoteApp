@@ -12,27 +12,31 @@ import { ServiceComponent } from 'src/app/service/service.component';
 })
 export class TrashcanComponent {
   noteTitle = '';
-  noteModel = new Note('','','','',false,false);
+  noteModel = new Note('', '', '', '', '', false, false);
 
-  discardNotes:any;
-  
-    constructor(private service: ServiceComponent){
-      
-    }
-  
-    ngOnInit(): void {
-      this.service.noteRequest().subscribe(data => {
-        this.discardNotes = data.discardNotes;
-        console.log(data);
-      });
-    }
+  discardNotes: any;
+
+  constructor(private service: ServiceComponent) {}
+
+  ngOnInit(): void {
+    this.service.noteRequest().subscribe(data => {
+      this.discardNotes = data.discardNotes;
+      console.log(data);
+    });
+  }
 
   readonly dialog = inject(MatDialog);
 
-  openDiscardDialog() {
-    const dialogRef = this.dialog.open(DiscardDialogComponent);
+  openDeleteDialog(noteId: any) {
+    const dialogRef = this.dialog.open(DiscardDialogComponent, {
+      data: { noteId: noteId }, // Pasar el noteId a la propiedad 'data' del diálogo
+    });
 
     dialogRef.afterClosed().subscribe(result => {
+      if (result === true) {
+        // Si el diálogo devuelve 'true' (eliminación exitosa), recarga las notas
+        this.ngOnInit();
+      }
       console.log(`Dialog result: ${result}`);
     });
   }
@@ -42,6 +46,9 @@ export class TrashcanComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
+      if (result === true) {
+        this.ngOnInit(); // Recargar las notas después de descartar todas
+      }
     });
   }
 }

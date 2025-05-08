@@ -12,7 +12,7 @@ import { ServiceComponent } from 'src/app/service/service.component';
 })
 export class AllNotesComponent {
   noteTitle = '';
-  noteModel = new Note('','','','',false,false);
+  noteModel = new Note('','','','','',false,false);
 
   allNotes: any;
   folderNames: string[] = [];

@@ -12,7 +12,7 @@ import { ServiceComponent } from 'src/app/service/service.component';
 })
 export class FoldersComponent {
   noteTitle = '';
-  noteModel = new Note('', '', '', '', false, false);
+  noteModel = new Note('','', '', '', '', false, false);
 
   foldersWithNotes: any;
   folderNames: string[] = [];
@@ -28,6 +28,19 @@ export class FoldersComponent {
       console.log('Folders with notes:', this.foldersWithNotes);
     });
   }
+
+  //Delete folder
+  /*deleteFolder() {
+    const folder = {
+      id: String,
+    };
+
+    this.service.createFolder(folder).subscribe(
+      (error) => {
+        console.error('Error creating the folder:', error);
+      }
+    );
+  }*/
 
   readonly dialog = inject(MatDialog);
 
