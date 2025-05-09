@@ -25,6 +25,15 @@ export class TrashcanComponent {
     });
   }
 
+  //Recover Note
+  recoverNote(noteId: any) {
+    this.service.recoverNote(noteId).subscribe(
+      (error) => {
+        console.error('Error discarding the folder:', error);
+      }
+    );
+  }
+
   readonly dialog = inject(MatDialog);
 
   openDeleteDialog(noteId: any) {

@@ -56,6 +56,15 @@ export class IndexComponent implements OnInit{
     this.noteModel.body = " ";
   }
 
+  //Discard Note
+  discardNote(noteId: any) {
+    this.service.discardNote(noteId).subscribe(
+      (error) => {
+        console.error('Error discarding the folder:', error);
+      }
+    );
+  }
+
   readonly dialog = inject(MatDialog);
 
   openEditNoteDialog() {

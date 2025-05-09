@@ -27,12 +27,22 @@ export class ServiceComponent {
     return this.http.post<any>("http://localhost:3000/createNote", newNote, this.getHeader);
   }
 
+  public editNote(newNote: { title: String; body: String; }): Observable<any> {
+    return this.http.post<any>("http://localhost:3000/note/:id/edit", newNote, this.getHeader);
+  }
+
   public createFolder(newFolder: { folder: String }): Observable<any> {
     return this.http.post<any>("http://localhost:3000/createFolder", newFolder, this.getHeader);
   }
 
-  public discardNote(note: { id: any }): Observable<any> {
-    return this.http.post<any>("http://localhost:3000/note/:id/discard", note, this.getHeader);
+  public discardNote(noteId: any ): Observable<any> {
+    const url = `http://localhost:3000/note/${noteId}/discard`;
+    return this.http.patch<any>(url, this.getHeader);
+  }
+
+  public recoverNote(noteId: any ): Observable<any> {
+    const url = `http://localhost:3000/note/${noteId}/recover`;
+    return this.http.patch<any>(url, this.getHeader);
   }
 
   public deleteNote(noteId: any ): Observable<any> {
