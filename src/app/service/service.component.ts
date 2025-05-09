@@ -27,8 +27,9 @@ export class ServiceComponent {
     return this.http.post<any>("http://localhost:3000/createNote", newNote, this.getHeader);
   }
 
-  public editNote(newNote: { title: String; body: String; }): Observable<any> {
-    return this.http.post<any>("http://localhost:3000/note/:id/edit", newNote, this.getHeader);
+  public updateNote(noteId: string, updatedData: { title: string; body: string; }): Observable<any> {
+    const url = `http://localhost:3000/note/${noteId}/edit`;
+    return this.http.patch<any>(url, updatedData, this.getHeader);
   }
 
   public createFolder(newFolder: { folder: String }): Observable<any> {

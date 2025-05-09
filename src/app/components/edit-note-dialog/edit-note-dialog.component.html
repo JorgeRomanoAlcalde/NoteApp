@@ -5,14 +5,15 @@
     </div>
     <mat-dialog-content>
         <mat-form-field class="inputs">
-            <input matInput placeholder="Title..." />
+            <input matInput placeholder="Title..." [(ngModel)]="noteTitle" />
         </mat-form-field><br>
         <mat-form-field class="inputs">
-            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" placeholder="Start writting..."></textarea>
+            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                placeholder="Start writing..." [(ngModel)]="noteBody"></textarea>
         </mat-form-field>
     </mat-dialog-content>
     <div class="buttons">
         <button mat-button (click)="onNoClick()">Cancel</button>
-        <button mat-button cdkFocusInitial>Save</button>
+        <button mat-button (click)="editNote()" cdkFocusInitial>Save</button>
     </div>
 </section>

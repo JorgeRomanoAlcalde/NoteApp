@@ -41,7 +41,7 @@
                     </div>
                 </section>
                 <mat-menu #options="matMenu">
-                    <button mat-menu-item (click)="openEditNoteDialog()"><mat-icon>edit_note</mat-icon>Edit</button>
+                    <button mat-menu-item (click)="openEditNoteDialog(note._id,note.title,note.body)"><mat-icon>edit_note</mat-icon>Edit</button>
                     <button mat-menu-item [matMenuTriggerFor]="colors"><mat-icon>palette</mat-icon>Change Color</button>
                     <button mat-menu-item><mat-icon>push_pin</mat-icon>Pin</button>
                     <button mat-menu-item [matMenuTriggerFor]="folders"><mat-icon>folder</mat-icon>Folder</button>
@@ -68,7 +68,7 @@
                     </div>
                 </section>
                 <mat-menu #options="matMenu">
-                    <button mat-menu-item (click)="openEditNoteDialog()"><mat-icon>edit_note</mat-icon>Edit</button>
+                    <button mat-menu-item (click)="openEditNoteDialog(note._id,note.title,note.body)"><mat-icon>edit_note</mat-icon>Edit</button>
                     <button mat-menu-item [matMenuTriggerFor]="colors"><mat-icon>palette</mat-icon>Change Color</button>
                     <button mat-menu-item><mat-icon>push_pin</mat-icon>Pin</button>
                     <button mat-menu-item [matMenuTriggerFor]="folders"><mat-icon>folder</mat-icon>Folder</button>

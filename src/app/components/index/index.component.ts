@@ -11,16 +11,16 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css'],
 })
-export class IndexComponent implements OnInit{
+export class IndexComponent implements OnInit {
   noteTitle = '';
-  noteModel = new Note('','','','','',false,false);
+  noteModel = new Note('', '', '', '', '', false, false);
   backendNotes: any;
-  pinnedNotes:any;
-  otherNotes:any;
+  pinnedNotes: any;
+  otherNotes: any;
   folderNames: string[] = [];
 
-  constructor(private service: ServiceComponent){
-    
+  constructor(private service: ServiceComponent) {
+
   }
 
   ngOnInit(): void {
@@ -67,19 +67,27 @@ export class IndexComponent implements OnInit{
 
   readonly dialog = inject(MatDialog);
 
-  openEditNoteDialog() {
-        const dialogRef = this.dialog.open(EditNoteDialogComponent);
-    
-        dialogRef.afterClosed().subscribe(result => {
-          console.log(`Dialog result: ${result}`);
-        });
+  openEditNoteDialog(noteId: any, noteTitle: any, noteBody: any) {
+    const dialogRef = this.dialog.open(EditNoteDialogComponent, {
+      data: { noteId: noteId,
+              noteTitle: noteTitle,
+              noteBody: noteBody
+       },
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === true) {
+        this.ngOnInit();
       }
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 
   openNewFolderDialog() {
-        const dialogRef = this.dialog.open(NewFolderDialogComponent);
-    
-        dialogRef.afterClosed().subscribe(result => {
-          console.log(`Dialog result: ${result}`);
-        });
-      }
+    const dialogRef = this.dialog.open(NewFolderDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }
